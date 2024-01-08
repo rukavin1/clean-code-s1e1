@@ -73,7 +73,6 @@ var editTask = function() {
     console.log("Edit Task...");
     console.log("Change 'edit' to 'save'");
 
-
     var listItem = this.parentNode;
 
     var editInput = listItem.querySelector('input[type=text]');
@@ -133,7 +132,6 @@ addButton.onclick = addTask;
 addButton.addEventListener("click", addTask);
 addButton.addEventListener("click", ajaxRequest);
 
-
 var bindTaskEvents = function(taskListItem,checkBoxEventHandler) {
     console.log("bind list item events");
     //select ListItems children
@@ -162,7 +160,3 @@ for (var i = 0; i < completedTasksHolder.children.length; i++) {
     //bind events to list items chldren(tasksIncompleted)
     bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 }
-
-// Issues with usability don't get seen until they are in front of a human tester.
-//prevent creation of empty tasks.
-//Change edit to save when you are in edit mode.
